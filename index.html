@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🍗 Coxinha da Realeza: A Joia de Sorocaba</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #fdf8f2;
+      color: #3a2f28;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #f7c04a;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ffd369;
+    }
+    .slide {
+      display: none;
+    }
+    .slide.active {
+      display: block;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide active" id="pagina1">
+    <h1>🍗 Coxinha da Realeza: A Joia de Sorocaba</h1>
+    <p>Uma princesa dessas não pode passar por esse mundo sem conhecer a verdadeira joia de Sorocaba: a coxinha da Real.</p>
+    <button onclick="mostrarPagina('pagina2')">Próxima Página</button>
+  </div>
+
+  <div class="slide hidden" id="pagina2">
+    <p>Mas calma… esse convite vai MUITO além da coxinha. Tô falando de um tour personalizado com guia exclusivo (sim, eu 😎).</p>
+    <button onclick="mostrarPagina('pagina3')">Próxima Página</button>
+  </div>
+
+  <div class="slide hidden" id="pagina3">
+    <p>Com direito a roteiro com surpresas, histórias exageradas, risadas garantidas e a famosa coxinha dourada e crocante.</p>
+    <button onclick="mostrarPagina('pagina4')">Próxima Página</button>
+  </div>
+
+  <div class="slide hidden" id="pagina4">
+    <p>Eu garanto a coxinha. O resto... a gente vive junto. Você aceita esse rolê real?</p>
+    <button onclick="alert('Convite aceito com honra real!')">Confirmar presença</button>
+  </div>
+
+  <script>
+    function mostrarPagina(id) {
+      const todas = document.querySelectorAll('.slide');
+      todas.forEach(p => p.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
